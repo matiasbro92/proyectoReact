@@ -1,4 +1,4 @@
-import logo from '/components/logo.png';
+import logo from '../components/logo.png';
 
 const CartWidget = () => {
 
