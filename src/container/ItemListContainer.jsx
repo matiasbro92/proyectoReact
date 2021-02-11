@@ -1,6 +1,29 @@
+import { useState } from "react";
 import { Card, Button, } from "react-bootstrap";
+import {ItemCount} from '../components/ItemCount';
+
 
 const ItemListContainer = (props) => {
+
+    const [contador, setContador] = useState (1)
+
+    const onAdd = () => {
+
+        setContador(contador +1);
+        
+    }
+
+    const onSubstract = () =>{
+
+
+
+        if (contador > 1){
+
+               setContador = (contador -1)
+        } else{
+            console.log("El valor es menor a lo que puede vender")
+        }
+    }
 
     return(
 
@@ -18,14 +41,13 @@ const ItemListContainer = (props) => {
                 <p>{props.price}</p>
             </Card.Text>
 
-            <Button variant="primary">Comprar</Button>
+            <ItemCount stock={5} contador={contador} onAdd={onAdd} onSubstract={onSubstract}/>
+
         </Card.Body>
     </Card>
 
     )
+};
 
 
-
-}
-
-export default ItemListContainer;
+    export default ItemListContainer;

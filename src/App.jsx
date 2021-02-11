@@ -12,7 +12,7 @@ const App = () => {
 
       <NavbarComponent/>
       <ItemListContainer product="Curso de Literatura" productDescription="Curso para profesores de Literatura" price="$15.000" />
-      <ItemCount/>
+    
 
     </>
   );
